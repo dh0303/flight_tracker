@@ -13,6 +13,10 @@ try:
         adults=1)
     print(response.data)
 
+    f = open("flightTest.txt", "w")
+    f.write(str(response.data))
+    f.close()
+
     
 except ResponseError as error:
     print(error)
